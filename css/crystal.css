@@ -1,0 +1,159 @@
+.crystal {
+    margin: 0 auto 100px;
+    position: relative;
+}
+
+.crystal .dot {
+    width: 19vw;
+    top: -10vw;
+    left: 20vw;
+}
+
+.crystal .blur {
+    width: 20vw;
+    left: 0;
+    top: 20vw;
+}
+
+.crystal_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.crystal_item {
+    position: relative;
+    height: fit-content;
+}
+
+.crystal_item:first-child {
+    width: 34%;
+}
+
+.crystal_item:nth-child(2) {
+    width: 46%;
+    transform: translate(-130px, -80px);
+}
+
+.crystal_item:nth-child(3) {
+    width: 34%;
+    margin-left: auto;
+    transform: translate(-65px, -120px);
+}
+
+.crystal_pic {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.crystal_item:first-child .crystal_pic {
+    padding-bottom: 133%;
+}
+
+.crystal_item:nth-child(2) .crystal_pic {
+    padding-bottom: 75%;
+}
+
+.crystal_item:nth-child(3) .crystal_pic {
+    padding-bottom: 133%;
+}
+
+.crystal_pic>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.crystal_text {
+    padding: 15px 25px;
+    background-color: #fff;
+    color: #6C6C6C;
+    position: absolute;
+    min-width: 200px;
+}
+
+.crystal_item:first-child .crystal_text {
+    left: 84%;
+    bottom: 16%;
+}
+
+.crystal_item:nth-child(2) .crystal_text {
+    left: 88%;
+    bottom: 7%;
+}
+
+.crystal_item:nth-child(3) .crystal_text {
+    right: 84%;
+    bottom: 10%;
+}
+
+.crystal_name {
+    font-size: 24px;
+    margin: 0 0 5px;
+    font-weight: normal;
+}
+
+.crystal_price {
+    margin: 0;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
+
+@media screen and (max-width: 1600px) {
+    .crystal_item:nth-child(2) {
+        transform: translate(-65px, -80px);
+    }
+    .crystal_item:nth-child(3) {
+        transform: translate(0, -120px);
+    }
+    .crystal_item:nth-child(2) .crystal_text {
+        left: inherit;
+        bottom: inherit;
+        right: 75%;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .crystal_item {
+        transform: none !important;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    .crystal_item:first-child {
+        width: 50%;
+    }
+    .crystal_item:nth-child(2) {
+        width: 100%;
+        order: 3;
+    }
+    .crystal_item:nth-child(3) {
+        width: 50%;
+        order: 2;
+    }
+    .crystal_text {
+        position: static;
+        width: 100%;
+        min-width: inherit;
+        background-color: transparent;
+        padding: 10px 0 0;
+    }
+    .crystal_name {
+        font-size: 18px;
+    }
+    
+    .crystal_price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .crystal_item {
+        padding: 0 5px;
+    }
+}

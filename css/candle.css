@@ -1,0 +1,230 @@
+.candle {
+    position: relative;
+}
+
+.candle .blur {
+    width: 20vw;
+    left: 0;
+    top: 20vw;
+}
+
+.candle .title {
+    text-align: center;
+    margin-bottom: 130px !important;
+}
+
+.candle_item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.candle_item::before {
+    position: absolute;
+    content: "";
+    background-color: #CCDEE4;
+    z-index: -1;
+}
+
+.candle_item:first-child {
+    justify-content: flex-end;
+}
+
+.candle_item:nth-child(2) {
+    align-items: flex-end;
+    margin-bottom: 165px;
+}
+
+.candle_item:nth-child(3) {
+    justify-content: center;
+    align-items: center;
+}
+
+.candle_item:first-child::before {
+    width: 35%;
+    height: calc(100% + 160px);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.candle_item:nth-child(2)::before {
+    width: 29%;
+    height: 90%;
+    right: 0;
+    top: -24%;
+}
+
+.candle_item:nth-child(3)::before {
+    width: 33%;
+    height: 56%;
+    left: 0;
+    top: -11%;
+}
+
+.candle_pic {
+    position: relative;
+}
+
+.candle_item:first-child .candle_pic {
+    width: 39%;
+    padding-bottom: calc(39% * 0.75);
+    margin-right: 55px;
+}
+
+.candle_item:nth-child(2) .candle_pic {
+    width: 39%;
+    padding-bottom: calc(39% * 0.75);
+    order: 2;
+}
+
+.candle_item:nth-child(3) .candle_pic {
+    width: 29%;
+    padding-bottom: calc(29% * 1.33);
+    margin-right: 65px;
+}
+
+.candle_pic>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.candle_text {
+    width: 48%;
+    padding-right: 55px;
+}
+
+.candle_item:nth-child(2) .candle_text {
+    order: 1;
+}
+
+.candle_title {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.candle_name {
+    font-size: 24px;
+    color: #6C6C6C;
+    font-weight: normal;
+    margin: 0;
+}
+
+.candle_price {
+    color: #72939E;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    font-family: 'Bodoni Moda', serif;
+    margin: 0 !important;
+    /* transform: translateY(-5px); */
+}
+
+.candle_intro {
+    color: #6C6C6C;
+    margin: 0 0 15px !important;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.candle_more {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    color: #72939E;
+    text-decoration: none;
+    padding-right: 24px;
+    position: relative;
+}
+
+.candle_more::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 13px;
+    background-image: url(../img/arrow-long-rihgt.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+    .candle_item:first-child .candle_pic {
+        margin-right: 30px;
+    }
+    .candle_item:nth-child(3) .candle_pic {
+        margin-right: 35px;
+    }
+    .candle_text {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .candle_item::before {
+        width: 50% !important;
+        height: 50% !important;
+        transform: none !important;
+        top: -10% !important;
+    }
+    .candle_item:nth-child(2) {
+        margin-bottom: 80px;
+    }
+    .candle_item:nth-child(3) {
+        justify-content: flex-end;
+    }
+    .candle_pic {
+        margin-bottom: 15px;
+    }
+    .candle_item:first-child .candle_pic {
+        width: 90%;
+        padding-bottom: calc(90% * 0.75);
+        margin-right: 0;
+    }
+    .candle_item:nth-child(2) .candle_pic {
+        width: 90%;
+        padding-bottom: calc(90% * 0.75);
+        order: 1;
+    }
+    
+    .candle_item:nth-child(3) .candle_pic {
+        width: 90%;
+        padding-bottom: calc(90% * 1.33);
+        margin-right: 0;
+    }
+    .candle_text {
+        width: 90%;
+        padding-right: 0;
+    }
+    .candle_item:nth-child(1) .candle_text {
+        padding-right: 0;
+    }
+    .candle_item:nth-child(2) .candle_text {
+        order: 2;
+    }
+    .candle_title {
+        margin-bottom: 5px;
+    }
+    .candle_name {
+        font-size: 18px;
+    }
+    .candle_price {
+        font-size: 18px !important;
+    }
+    .candle_intro {
+        font-size: 14px !important;
+    }
+}

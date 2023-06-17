@@ -1,0 +1,138 @@
+.oil {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.oil .blur {
+    width: 20vw;
+    right: 0;
+    top: 20vw;
+}
+
+.oil_inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.oil_col {
+    width: 33.3333%;
+    padding: 0 10px;
+}
+
+.oil_item {
+    position: relative;
+}
+
+.oil_pic {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 133%;
+}
+
+.oil_col:nth-child(2) .oil_item:first-child .oil_pic {
+    padding-bottom: 75%;
+    margin-bottom: 20px;
+}
+
+.oil_col:nth-child(2) .oil_item:nth-child(2) .oil_pic {
+    padding-bottom: 100%;
+}
+
+.oil_pic>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.oil_text {
+    position: absolute;
+    padding: 35px 15px 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.26) 100%);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.oil_name {
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+.oil_price {
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    font-family: 'Bodoni Moda', serif;
+}
+
+@media screen and (max-width: 991px) {
+    .oil_col {
+        width: 50%;
+    }
+    .oil_col:nth-child(2) {
+        order: 3;
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .oil_col:nth-child(3) {
+        order: 2;
+    }
+    .oil_col:nth-child(2) .oil_item {
+        width: 50%;
+    }
+    .oil_col:nth-child(2) .oil_item:first-child {
+        padding-right: 10px;
+    }
+    .oil_col:nth-child(2) .oil_item:nth-child(2) {
+        padding-left: 10px;
+    }
+    .oil_col:nth-child(2) .oil_item .oil_pic {
+        padding-bottom: 75% !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .oil_col {
+        padding: 0 5px;
+    }
+    .oil_col:nth-child(2) {
+        margin-top: 10px;
+    }
+    .oil_col:nth-child(2) .oil_item:first-child {
+        padding-right: 0;
+    }
+    .oil_col:nth-child(2) .oil_item:nth-child(2) {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+    .oil_name {
+        font-size: 16px;
+    }
+    .oil_price {
+        font-size: 20px !important;
+    }
+    .oil_col:nth-child(2) {
+        display: block;
+    }
+    .oil_col:nth-child(2) .oil_item {
+        width: 100%;
+    }
+    .oil_col:first-child .oil_text {
+        display: block;
+    }
+    .oil_col:nth-child(3) .oil_text {
+        display: block;
+    }
+}
